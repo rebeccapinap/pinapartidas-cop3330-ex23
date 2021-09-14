@@ -27,10 +27,12 @@ public class App
             if (batteryTerm.equals("y"))
             {
                 System.out.println("Clean terminals and try starting again.");
+                return;
             }
             else if (batteryTerm.equals("n"))
             {
                 System.out.println("Replace cables and try again.");
+                return;
             }
         }
         else if (carSilent.equals("n"))
@@ -41,6 +43,7 @@ public class App
             if (slicking.equals("y"))
             {
                 System.out.println("Replace the battery.");
+                return;
             }
             else if (slicking.equals("n"))
             {
@@ -50,6 +53,7 @@ public class App
                 if (crankUp.equals("y"))
                 {
                     System.out.println("Check spark plug connections.");
+                    return;
                 }
                 else if (crankUp.equals("n"))
                 {
@@ -64,15 +68,18 @@ public class App
                         if (fuelInject.equals("y"))
                         {
                             System.out.println("Get it in for service.");
+                            return;
                         }
                         else if (fuelInject.equals("n"))
                         {
                             System.out.println("Check to ensure the choke is opening and closing.");
+                            return;
                         }
                     }
                     else if (startDie.equals("n"))
                     {
                         System.out.println("This should not be possible.");
+                        return;
                     }
                 }
             }
